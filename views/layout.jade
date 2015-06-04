@@ -1,0 +1,72 @@
+include _mixins/social_icon.jade  
+
+doctype html
+html
+  head
+    title test
+    link(href="/css/styles.css", rel="stylesheet")
+    link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", rel="stylesheet")
+    link(href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css", rel="stylesheet")
+    link(href="/css/plugins.css", rel="stylesheet")
+    
+  
+  body
+    header(class="main-header")
+      nav(class="navbar navbar-default navbar-fixed-top")
+        div(class="container-fluid")
+          div(class="navbar-header")
+            a(href="/", class="navbar-brand")
+              span ino
+              b T
+              span ive
+            button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#navbar-collapse")
+              i(class="fa fa-bars")
+          
+          div(class="collapse navbar-collapse", id="navbar-collapse")
+            ul(class="nav navbar-nav navbar-right")
+              each link in nav
+                li
+                  a(href=link.url)= link.name
+                  
+            form(class="navbar-form navbar-right", role="search", style="display: none;")
+              div(class="input-group")
+                input(type="text", class="form-control", placeholder="search ...")
+                div(class="input-group-btn")
+                  button(class="btn btn-inotive1", type="submit")
+                    i(class="fa fa-search")
+  
+    block content
+      
+    
+    
+    
+    block footer
+      
+      footer(class="footer")
+        div(class="container")
+          div(class="row")
+            div(class="col-md-12")
+              div(class="inotive-icon")
+                +social_icon('fa-facebook', 'link')
+                +social_icon('fa-git', 'link')
+                +social_icon('fa-google-plus', 'link')
+                +social_icon('fa-twitter', 'link')
+          
+          div(class="row")  
+            .col-md-12
+              small Proudly powered by 
+                a(href="/link-to-nodejs") NodeJs
+                span  & 
+                a(href="/link-to-express") Express
+        
+          
+    
+    
+    
+    block js
+      script(src="http://code.jquery.com/jquery-1.11.3.min.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.3/moment-with-locales.min.js")
+      script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js")
+        
+      script(src="/js/main.js")
+      script(src="/js/plugins.js")

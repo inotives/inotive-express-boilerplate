@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title test
+    link(href="/css/styles.css", rel="stylesheet")
+    link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css")
+    link(href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
+  
+  body(class="skin-black-light")
+    
+    div(class="container")
+      h1= message
+      h2= error.status
+      pre #{error.stack}
