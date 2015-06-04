@@ -1,4 +1,7 @@
-# inotive-html5-boilerplate
+# inotive-express-boilerplate
+This repo is a starting point for those who are interested in nodejs and express framework.
+It use Gulp as workflow control (todo less compile, js concat, copy fonts and images).
+
 
 ## How to start
 
